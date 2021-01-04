@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul id="ulbox">
+
+    </ul>
+    <script>
+        var data = [
+            {title:"世界",read:10},
+            {title:"天客",read:20}
+        ]
+        
+        var ul = document.getElementById('ulbox');
+        
+
+        for(var i = 0; i < data.length; i++) {
+            var li_ = document.createElement('li');
+            li_.innerHTML = `
+            <span>${data[i].title}</span>
+            <span>${data[i].read}</span>
+            <span>更多</span>
+        `
+        ul.appendChild(li_);
+        }
+        
+        console.log(li_);
+    </script>
+</body>
+</html>
